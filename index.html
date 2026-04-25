@@ -5,18 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>𝐒𝐇𝐀𝐑𝐌𝐀 , 𝐑𝐇𝐄𝐀 , 𝐘𝐔𝐑𝐈 , 𝐑𝐔𝐑𝐔 💦👅</title>
 
-<style>
-body {<audio id="m" src="music.mp3" autoplay loop muted></audio>
+<style> 
+  <script>
+const audio = document.getElementById("bg");
 
-<script>
-const a = document.getElementById("m");
+window.addEventListener("load", () => {
+  audio.play().then(() => {
+    setTimeout(() => {
+      audio.muted = false;
+    }, 1000);
+  }).catch(()=>{});
+});
 
-// try unmute + play bar-bar
-setInterval(() => {
-  a.muted = false;
-  a.play().catch(()=>{});
-}, 1000);
+["touchstart","scroll"].forEach(e => {
+  window.addEventListener(e, () => {
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+});
 </script>
+body {<audio id="bg" src="music.mp3" autoplay loop playsinline muted></audio>
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #ffd6e0, #fff0f5);
